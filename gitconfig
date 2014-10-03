@@ -1,0 +1,9 @@
+[user]
+	user = Chung-Heng Yeh
+	email = chungheng.yeh@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[push]
+	default = matching
