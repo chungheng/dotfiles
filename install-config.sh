@@ -14,9 +14,9 @@ elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
 fi
 # elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
 
-[ -e "~/.bashrc_aliases" ] && myexit "~/.bashrc_aliases already exists..."
+[ -e "~/.bash_aliases" ] && myexit "~/.bash_aliases already exists..."
 
-ln -s $PWD/bash/bashrc_aliases ~/.bashrc_aliases
+ln -s $PWD/bash/bash_aliases ~/.bash_aliases
 
 [ -e "~/.hgrc" ] && myexit "~/.hgrc already exists..."
 
