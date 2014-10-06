@@ -1,2 +1,7 @@
 [ui]
 username = Chung-Heng Yeh <chungheng.yeh@gmail.com>
+
+[extensions]
+mq =
+graphlog =
+color =
