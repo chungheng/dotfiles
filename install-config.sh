@@ -5,9 +5,14 @@ myexit() {
     exit 1
 }
 
-[ -e "~/.bashrc" ] && myexit "~/.bashrc already exists..."
-
-ln -s $PWD/bashrc ~/.bashrc
+if [ "$(uname)" == "Darwin" ]; then
+    [ -e "~/.bash_profile" ] && myexit "~/.bash_profile already exists..."
+    ln -s $PWD/bashrc ~/.bash_profile
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    [ -e "~/.bashrc" ] && myexit "~/.bashrc already exists..."
+    ln -s $PWD/bashrc ~/.bashrc
+# elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+fi
 
 [ -e "~/.bashrc_aliases" ] && myexit "~/.bashrc_aliases already exists..."
 
