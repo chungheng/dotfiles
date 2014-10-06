@@ -85,7 +85,11 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ls='ls -G'
+if [ "$(uname)" == "Darwin" ]; then
+    alias ls='ls -G'
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    alias ls='ls --color=auto --group-directories-first'
+fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
