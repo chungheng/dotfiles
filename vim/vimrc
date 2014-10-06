@@ -173,6 +173,7 @@ inoremap <silent> <F3> <C-C>:call ToggleSpell()<CR>i
 " File Type Extension
 " ============================================================================
 autocmd FileType tex setlocal noexpandtab tabstop=2 softtabstop=1
+autocmd FileType py setlocal noexpandtab tabstop=4 softtabstop=4
 
 " ============================================================================
 " Python IDE Setup
@@ -241,4 +242,4 @@ map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 " " wget -O ~/.vim/ftplugin/python_editing.vim
 " http://www.vim.org/scripts/download_script.php?src_id=5492
 "set nofoldenable
-set foldmethod=manual 
+set foldmethod=manual
