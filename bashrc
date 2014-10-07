@@ -87,6 +87,9 @@ fi
 # some more ls aliases
 if [ "$(uname)" == "Darwin" ]; then
     alias ls='ls -G'
+    if [ -f ~/.profile ]; then
+        . ~/.profile
+    fi
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     alias ls='ls --color=auto --group-directories-first'
 fi
