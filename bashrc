@@ -123,5 +123,5 @@ fi
 
 export PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-linux
 
-export INFORPATH=/usr/local/texlive/2014/texmf-dist/doc/info
-export MANPATH=/usr/local/texlive/2014/texmf-dist/doc/man
+export INFORPATH=$INFORPATH:/usr/local/texlive/2014/texmf-dist/doc/info
+export MANPATH=$MANPATH:/usr/local/texlive/2014/texmf-dist/doc/man
