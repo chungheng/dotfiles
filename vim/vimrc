@@ -91,6 +91,8 @@ autocmd ColorScheme * highlight ExtraWhitespaces ctermbg=red guibg=red
 "let m2 = matchadd( "TAB", '/\t\+$/' )
 au InsertEnter * match ExtraWhitespaces /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhitespaces /\s\+$/
+" Remove trailing whitespace
+nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 
 " Show tab
 " autocmd ColorScheme * highlight TAB ctermbg=208
@@ -174,6 +176,7 @@ inoremap <silent> <F3> <C-C>:call ToggleSpell()<CR>i
 " ============================================================================
 autocmd FileType tex setlocal noexpandtab tabstop=2 softtabstop=1
 autocmd FileType py setlocal noexpandtab tabstop=4 softtabstop=4
+autocmd FileType html setlocal noexpandtab tabstop=2 softtabstop=2
 
 " ============================================================================
 " Python IDE Setup
@@ -213,7 +216,7 @@ set wildignore+=*/coverage/*
 " Settings for jedi-vim
 " cd ~/.vim/bundle
 " git clone git://github.com/davidhalter/jedi-vim.git
-let g:jedi#related_names_command = "<leader>z"
+let g:jedi#usages_command = "<leader>z"
 let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 0
 map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
