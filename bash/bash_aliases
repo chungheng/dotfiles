@@ -1,2 +1,3 @@
 # rm alias
 alias rm='rm -i'
+alias pr='xfce4-panel -r'
