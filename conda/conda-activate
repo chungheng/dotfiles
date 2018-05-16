@@ -6,10 +6,11 @@
 } &> /dev/null
 
 exec $SHELL -i 3<<SCRIPT 4<&0 <&3
+exec &>/dev/null
 . ~/.bash_profile
 export PATH="${_CONDA_BIN}:$PATH"
 export PS1="\\033[48;5;195;38;5;201m[SUB]\\033[0m$PS1"
 unset PYTHONHOME
 . activate ${@}
-exec  3>&- <&4
+exec &>$(tty)  3>&- <&4
 SCRIPT
